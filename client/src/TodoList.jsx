@@ -2,16 +2,20 @@ import React from "react";
 
 function TodoList(props) {
 
+  // This method is for handling onClick event on delete button
   function onClickHapusHandler(event){
     props.onDeleteTask(event.target.id);
   }
 
+  // This condition block is for initial text when the tasks is empty
   if (props.tasks.length == 0){
     return(
       <p className = {props.isDarkMode ? "text-darkmode" : "text-lightmode"}> There is no activity yet </p>
     )
   }
 
+  // This is the return value of TodoList
+  // Returning a table of tasks
   return (
     <div className="container">
       <table>

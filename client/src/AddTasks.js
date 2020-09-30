@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 
 function AddTasksForm(props){
   
+    // These states are for the text that will be displayed in the forms
     const [inputedText, setInputedText] = useState('');
     const [inputedTime, setInputedTime] = useState('00:00');
 
+    // This method is for handling onSubmit event 
     function handleSubmitTask(event){
         event.preventDefault();
         props.onAddNewTask(inputedText, inputedTime);
@@ -12,14 +14,18 @@ function AddTasksForm(props){
         setInputedTime("00:00");
     }
 
+    // This method is for handling onChange event in text input field
     function handleOnChangeInputText(event){
         setInputedText(event.target.value);
     }
 
+    // This method is for handling onChange event in time input field
     function handleOnChangeInputTime(event){
         setInputedTime(event.target.value);
     }
   
+    // This is the return value of addTaskForm
+    // Returning a set of forms that contain text field, time field, and a submit button
     return (
         <div>
             <br />
