@@ -1,5 +1,10 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +40,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+label{
+  text-align: left !important;
+}
+
+h3{
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.toggle-button{
+  width: 100%;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.bg-darkmode{
+  background-color: #2f2f2f;
+}
+
+.bg-lightmode{
+  background-color: #fff;
+}
+
+.text-darkmode{
+  color: white;
+}
+
+.text-lightmode{
+  color: black;
+}
+
+.border-darkmode{
+  border-color: white;
+}
+
+.border-lightmode{
+  border-color: black;
+}
+
+p{
+  text-align: center;
 }
