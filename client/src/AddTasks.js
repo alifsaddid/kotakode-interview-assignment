@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 function AddTasksForm(props){
   
     const [inputedText, setInputedText] = useState('');
-    const [inputedTime, setInputedTime] = useState('');
+    const [inputedTime, setInputedTime] = useState('00:00');
 
     function handleSubmitTask(event){
         event.preventDefault();
         props.onAddNewTask(inputedText, inputedTime);
         setInputedText("");
+        setInputedTime("00:00");
     }
 
     function handleOnChangeInputText(event){
@@ -30,7 +31,7 @@ function AddTasksForm(props){
                         <div className="row">
                             <div className="col s4">
                                 <label htmlFor="start_time">Start Time</label>
-                                <input className={props.isDarkMode ? "text-darkmode" : "text-lightmode"} id="start_time" type="time" onChange={handleOnChangeInputTime} required/>
+                                <input value={inputedTime} className={props.isDarkMode ? "text-darkmode" : "text-lightmode"} id="start_time" type="time" onChange={handleOnChangeInputTime} required/>
                             </div>
                         </div>
                     </div>

@@ -26,10 +26,10 @@ function TodoList(props) {
         <tbody>
           {props.tasks.map((task) => {
             return (
-              <tr className={props.isDarkMode ? "border-darkmode" : "border-lightmode"}>
+              <tr className={props.isDarkMode ? "border-darkmode" : "border-lightmode"} key={task.id}>
                 <td className={props.isDarkMode ? "text-darkmode" : "text-lightmode"}>{task.name}</td>
                 <td className={props.isDarkMode ? "text-darkmode" : "text-lightmode"}>{task.startTime}</td>
-                <td className={props.isDarkMode ? "text-darkmode" : "text-lightmode"}><button id={task.id} onClick={onClickHapusHandler} class="btn red"> Hapus </button></td>
+                <td className={props.isDarkMode ? "text-darkmode" : "text-lightmode"}><button id={task.id} onClick={onClickHapusHandler} className="btn red"> Hapus </button></td>
               </tr>
             );
           })}
